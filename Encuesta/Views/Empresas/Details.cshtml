@@ -1,0 +1,33 @@
+﻿@model Encuesta.Models.Empresa
+
+@{
+    ViewBag.Title = "Empresa";
+}
+
+<h2>            @Html.DisplayFor(model => model.Empresa1)</h2>
+
+<div>
+    <h4>Empresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Numero de Total de Tabajadores
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoTotalTrabajadores)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nit)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit")
+</p>

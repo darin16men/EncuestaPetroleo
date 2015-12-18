@@ -1,0 +1,154 @@
+﻿@model Encuesta.Models.EncuestaPerfilesPetroleo
+
+@{
+    ViewBag.Title = "Crear ocupación de " + @ViewBag.Especilidad  ;
+}
+
+<h2>@ViewBag.Title</h2>
+<script type="text/javascript">
+    $("#Cargo option:last").after($('<option value="1">my option</option>'));
+</script>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cargo, "Ocupación", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Cargo", null, "-- Selecione Ocupación --", htmlAttributes: new { @class = "form-control", @onchange = "var op = $('#Cargo option:selected').text(); if (op == 'Otro') { $('.OtraOcupacion').removeClass('hidden'); } else{ $('.OtraOcupacion').addClass('hidden'); }" })
+                @Html.ValidationMessageFor(model => model.Cargo, "", new { @class = "text-danger" })
+                <p>
+                    *Si  no encuentra  una  ocupación,  ingresela  en otro.
+                </p>
+            </div>
+        </div>
+        <div class="form-group hidden OtraOcupacion">
+            <label class="control-label col-md-2" for="OtraOcupacion">Cual?</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" id="OtraOcupacion" name="OtraOcupacion" type="text" value="">
+                <span class="field-validation-valid text-danger" data-valmsg-for="OtraEspecialidad" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.NivelEducativo, "Nivel Educativo", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("NivelEducativo", null, "-- Selecione Nivel Educativo --", htmlAttributes: new { @class = "form-control validate[required]" })
+                @Html.ValidationMessageFor(model => model.NivelEducativo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div id="NivelEStudiohidden" class="form-group hidden">
+            @Html.LabelFor(model => model.EstudioRequerido, "Título en: ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.EstudioRequerido, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.EstudioRequerido, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ExperienciaRelacionada_id, "Experiencia Relacionada", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ExperienciaRelacionada_id", null, "-- Selecione Experiencia Relacionada --", htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ExperienciaRelacionada_id, "", new { @class = "text-danger" })
+            </div>
+            <p> *Tiempo de experiencia requerido para desempeñar la ocupación.</p>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CertificacionesRequeridas, "Cursos adicionales requeridos", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CertificacionesRequeridas, new { htmlAttributes = new { @class = "form-control validate[required,maxSize[140],custom[onlyLetterNumberSp]" } })
+                @Html.ValidationMessageFor(model => model.CertificacionesRequeridas, "", new { @class = "text-danger" })
+            </div>
+            <p> *NA= En caso de no requerir cursos adicionales.</p>
+            
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoDeCargos, "Cuantas personas ejecutan esta ocupación", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("NoDeCargos", null, "-- Selecione No. de personas --", htmlAttributes: new { @class = "form-control validate[required]" })
+                @Html.ValidationMessageFor(model => model.NoDeCargos, "", new { @class = "text-danger" })
+                <p>*Cantidad de personas que hay,  de esta misma ocupación</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Caracteristicas, "Funciones de la Ocupación", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Caracteristicas, 5, 80, new { @class = "form-control validate[required,maxSize[1500],custom[onlyLetterNumberSpSL]" })
+                @Html.ValidationMessageFor(model => model.Caracteristicas, "", new { @class = "text-danger" })
+                <p> *Principales funciones que caracteriza la ocupación</p>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.DescripcionOcupacion, "Descripción de la Ocupación", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.DescripcionOcupacion, 5, 80, new { @class = "form-control validate[required,maxSize[1500],custom[onlyLetterNumberSpSL]" })
+                @Html.ValidationMessageFor(model => model.DescripcionOcupacion, "", new { @class = "text-danger" })
+                <p> *Descripción general la ocupación</p>
+            </div>
+        </div>
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.Especialidad_id, "Especialidad_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Especialidad_id", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Especialidad_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group hidden">
+            @Html.LabelFor(model => model.OtraEspecialidad_id, "OtraEspecialidad_id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("OtraEspecialidad_id", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.OtraEspecialidad_id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+         <div class="form-group" style="height: 3em;">
+             <label class="control-label col-md-2" for="Observaciones"><input type="checkbox" data-val="true" value="true" name="Observacionescheck" id="Observacionescheck">Desea agregar una Observación?</label>
+             <div class="col-md-10 hidden Observaciongrup">
+                 @Html.TextAreaFor(model => model.Observaciones, 3, 80, new { @class = "form-control validate[required,maxSize[1500],custom[onlyLetterNumberSpSL]" })
+                 @Html.ValidationMessageFor(model => model.Observaciones, "", new { @class = "text-danger" })
+             </div>
+             <p class="comentariocultar">*Si alguna de la ocupaciones recibe una denominación diferente en su empresa, indiquelo en observaciones </p>
+             <br style="clear:both;" />
+         </div>
+        <br style="clear:both;" />
+        <div class="form-group">
+            <div class=" col-md-12">
+                <input type="submit" value="Agregar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Volver a Especialidades", "../EmpresaEspecialidads/Index")
+</div>
+<script type="text/javascript">
+    $("#Caracteristicas").val('1.\n2.\n3.\n4.\n5.');
+    $(function () {
+        if ($('#Observacionescheck').is(':checked')) {
+            $('.Observaciongrup').removeClass('hidden');
+            } else {
+                $('.inputDisabled').removeAttr("required")
+            }
+        $('#Observacionescheck').change(function () {
+            if ($('#Observacionescheck').is(':checked')) { $('.Observaciongrup').removeClass('hidden'); $('.comentariocultar').addClass('hidden'); } else { $('.Observaciongrup').addClass('hidden'); $('.comentariocultar').removeClass('hidden'); };
+            });
+        })
+    $("#NivelEducativo").change(function () {
+        opcionNE = $('#NivelEducativo option:selected').val() ;
+        if (opcionNE > 3 ) {
+            $("#NivelEStudiohidden").removeClass('hidden');
+            $("#EstudioRequerido").removeClass('validate[required,maxSize[300],custom[onlyLetterNumberSpSL]');
+        } else {
+            $("#NivelEStudiohidden").addClass('hidden ');
+            $("#EstudioRequerido").removeClass('validate[required,maxSize[300],custom[onlyLetterNumberSpSL]');
+        }
+    });
+    </script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

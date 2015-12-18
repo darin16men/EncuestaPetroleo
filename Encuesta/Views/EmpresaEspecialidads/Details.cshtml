@@ -1,0 +1,42 @@
+﻿@model Encuesta.Models.EmpresaEspecialidad
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EmpresaEspecialidad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.Empresa1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Empresa1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtraEspecialidad.OtraEspecialidad1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtraEspecialidad.OtraEspecialidad1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Especialidadid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Encuesta.Models.PersonaDiligencia>
+
+@{
+    ViewBag.Title = "Listado de Usuarios";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <h4>Dotos Adicionales</h4>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCompleto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profesion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dependencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Celular)
+        </th>
+        <th>
+            Empresa
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCompleto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profesion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dependencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Celular)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empresa.Empresa1)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

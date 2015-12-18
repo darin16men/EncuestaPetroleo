@@ -1,0 +1,31 @@
+﻿@model Encuesta.Models.EmpresaEspecialidad
+
+@{
+    ViewBag.Title = "Borrar Especialidad ";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<h3>¿Seguro que quieres borrar La especialidad?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Especilidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtraEspecialidad.OtraEspecialidad1)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver Especialidades", "Index")
+        </div>
+    }
+</div>

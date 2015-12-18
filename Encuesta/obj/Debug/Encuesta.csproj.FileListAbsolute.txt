@@ -1,0 +1,304 @@
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Encuesta.dll.config
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Encuesta.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Encuesta.pdb
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Antlr3.Runtime.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\EntityFramework.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\EntityFramework.SqlServer.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Google.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Web.Infrastructure.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Newtonsoft.Json.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Helpers.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Mvc.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Optimization.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Razor.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.Deployment.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.Razor.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\WebGrease.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Antlr3.Runtime.pdb
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\EntityFramework.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\EntityFramework.SqlServer.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Google.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\Newtonsoft.Json.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Helpers.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Mvc.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Optimization.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.Razor.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.Deployment.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\System.Web.WebPages.Razor.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\bin\es\System.Web.Optimization.resources.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\obj\Debug\Encuesta.csprojResolveAssemblyReference.cache
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\obj\Debug\Encuesta.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\baselimpia\Encuesta\obj\Debug\Encuesta.pdb
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.csprojResolveAssemblyReference.cache
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.Properties.Resources.resources
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.csproj.GenerateResource.Cache
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.dll.config
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.pdb
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Antlr3.Runtime.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.SqlServer.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Core.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Cookies.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Facebook.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Google.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.OAuth.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Twitter.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Web.Infrastructure.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Newtonsoft.Json.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Owin.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Helpers.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Mvc.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Optimization.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Razor.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Deployment.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Razor.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\WebGrease.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Antlr3.Runtime.pdb
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.SqlServer.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Core.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Cookies.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Facebook.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Google.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.OAuth.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Twitter.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Newtonsoft.Json.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Helpers.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Mvc.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Optimization.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Razor.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Deployment.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Razor.xml
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\System.Web.Optimization.resources.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.dll
+D:\ivan\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.pdb
+G:\EncuestaPetroleo1\Encuesta\bin\Encuesta.dll.config
+G:\EncuestaPetroleo1\Encuesta\bin\Encuesta.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Encuesta.pdb
+G:\EncuestaPetroleo1\Encuesta\bin\Antlr3.Runtime.dll
+G:\EncuestaPetroleo1\Encuesta\bin\EntityFramework.dll
+G:\EncuestaPetroleo1\Encuesta\bin\EntityFramework.SqlServer.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Core.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Owin.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Cookies.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Facebook.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Google.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.OAuth.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Twitter.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Web.Infrastructure.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Newtonsoft.Json.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Owin.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Helpers.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Optimization.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Razor.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Deployment.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.dll
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Razor.dll
+G:\EncuestaPetroleo1\Encuesta\bin\WebGrease.dll
+G:\EncuestaPetroleo1\Encuesta\bin\Antlr3.Runtime.pdb
+G:\EncuestaPetroleo1\Encuesta\bin\EntityFramework.xml
+G:\EncuestaPetroleo1\Encuesta\bin\EntityFramework.SqlServer.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Core.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Owin.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Cookies.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Facebook.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Google.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.OAuth.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Twitter.xml
+G:\EncuestaPetroleo1\Encuesta\bin\Newtonsoft.Json.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Helpers.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Optimization.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.Razor.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Deployment.xml
+G:\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Razor.xml
+G:\EncuestaPetroleo1\Encuesta\bin\es\System.Web.Optimization.resources.dll
+G:\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.csprojResolveAssemblyReference.cache
+G:\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.Properties.Resources.resources
+G:\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.csproj.GenerateResource.Cache
+G:\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.dll
+G:\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Encuesta.dll.config
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Encuesta.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Encuesta.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Antlr3.Runtime.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\EntityFramework.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\EntityFramework.SqlServer.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Core.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Cookies.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Facebook.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Google.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.OAuth.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Twitter.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Web.Infrastructure.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Newtonsoft.Json.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Helpers.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Optimization.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Razor.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Deployment.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Razor.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\WebGrease.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Antlr3.Runtime.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\EntityFramework.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\EntityFramework.SqlServer.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Core.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Cookies.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Facebook.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Google.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.OAuth.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Microsoft.Owin.Security.Twitter.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\Newtonsoft.Json.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Helpers.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Optimization.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Razor.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Deployment.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.WebPages.Razor.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\System.Web.Optimization.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.Properties.Resources.resources
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.csproj.GenerateResource.Cache
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Mvc.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\System.Web.Mvc.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\EntityFramework.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\EntityFramework.SqlServer.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\Microsoft.Owin.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\System.Web.Mvc.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo1\Encuesta\obj\Debug\Encuesta.csprojResolveAssemblyReference.cache
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.Properties.Resources.resources
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.csproj.GenerateResource.Cache
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.dll.config
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Encuesta.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Antlr3.Runtime.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\DocumentFormat.OpenXml.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.SqlServer.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EPPlus.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EPPlusEnumerable.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Core.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Cookies.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Facebook.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Google.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.OAuth.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Twitter.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Web.Infrastructure.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Newtonsoft.Json.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Owin.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Synvata.MsOfficeFileGenerator.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Helpers.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Mvc.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Optimization.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Razor.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Deployment.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Razor.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\WebGrease.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Antlr3.Runtime.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EntityFramework.SqlServer.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EPPlus.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\EPPlusEnumerable.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Core.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Cookies.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Facebook.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Google.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.OAuth.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Microsoft.Owin.Security.Twitter.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\Newtonsoft.Json.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Helpers.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Mvc.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Optimization.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.Razor.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Deployment.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\System.Web.WebPages.Razor.xml
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\EntityFramework.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\EntityFramework.SqlServer.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\Microsoft.Owin.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\System.Web.Mvc.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\bin\es\System.Web.Razor.resources.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.dll
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.pdb
+D:\IvanPerilla\Disco local\Documents\Visual Studio 2013\Projects\EncuestaPetroleo\Encuesta\obj\Debug\Encuesta.csprojResolveAssemblyReference.cache

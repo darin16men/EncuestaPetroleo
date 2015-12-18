@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Encuesta.Models.PersonasReunionesPerfiles>
+
+@{
+    ViewBag.Title = "Para la definición de los perfiles de " + ViewBag.Especilidad + ", se  trabajará con un grupo de expertos; por lo anterior, debe diligenciar la información de la persona asignada.";
+}
+
+<h3>@ViewBag.Title</h3>
+<p>Relacione las personas de  su empresa con conocimientos en temas de perfiles ocupacionales y que participarán en las reuniones, por especialidad, para determinar los  perfiles finales  del sector de petróleo. Para culminar esta especialidad debe registrar al menos uno.</p>
+@if (Model.Count() == 0)
+{
+    <div class="alert-danger">
+        <h4> Actualmente no se han ingresado personas para la especialidad @ViewBag.Especilidad!! </h4>
+    </div>
+    <p>
+        @Html.ActionLink("Registrar  Experto", "Create/", new { id = ViewBag.EspecilidadId }, new { @class = "btn btn-primary btn-lg" })
+    </p>
+}
+else
+{
+    <p>
+        @Html.ActionLink("Registrar  Experto", "Create/", new { id = ViewBag.EspecilidadId }, new { @class = "btn btn-primary btn-lg" })
+    </p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre Completo
+        </th>
+        <th>
+           Profesón
+        </th>
+        <th>
+            Cargo - Dependencia
+        </th>
+        <th>
+            Correo Electrónico
+        </th>
+        <th>
+            Telefono - Celular
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profesion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CargoDependencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CorreoElectronico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoCelular)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>
+}
+<ul class="pager">
+    <li class="previous"><a href="../../EmpresaEspecialidads/index">&larr; Anterior</a></li>
+        @if (ViewBag.no == "Culminar")
+        {
+            <a class="confirm btn btn-success" href=#>Culminar Especialidad</a>
+            @Html.ActionLink("r", "../CulminacionesForEspacialidads/Culminar/", new { id = ViewBag.EspecilidadId }, new { @class = "hidden culminarok" })
+        }
+        else
+        {
+            @*<a class="confirmaplica btn btn-info" href=#>Marcar especialidad como no Aplica</a>
+            @Html.ActionLink("r", "../CulminacionesForEspacialidads/NoAplica/", new { id = ViewBag.EspecilidadId }, new { @class = "hidden culminarokaplica" })*@
+        }
+
+</ul>
+<!-- bootbox code -->
+@Scripts.Render("~/bundles/bootbox")
+<script>
+    bootbox.setDefaults({ locale: "es" });
+    $(document).on("click", ".confirm", function (e) {
+        bootbox.confirm("<h2 class='alert-info'>Esta seguro de  culminar esta especialidad!</h2>", function (result) {
+            if (result) {
+                $(".culminarok")[0].click();
+            }
+        });
+    });
+</script>
+
+<script>
+    $(document).on("click", ".confirmaplica", function (e) {
+        bootbox.confirm("<h2 class='alert-danger'>Esta seguro de Marcar especialidad como no Aplica!</h2>",  function (result) {
+            if (result) {
+                $(".culminarokaplica")[0].click();
+            } 
+        });
+    });
+</script>

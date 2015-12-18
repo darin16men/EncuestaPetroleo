@@ -1,0 +1,91 @@
+﻿@model IEnumerable<Encuesta.Models.EncuestaPerfilesPetroleo>
+
+@{
+    ViewBag.Title = "Listado Ocupaciones por Especialidades de " + ViewBag.Especilidad; 
+}
+
+<h2>@ViewBag.Title</h2>
+<hr />
+<h4> </h4>
+@if (Model.Count() == 0)
+{
+    <div class="alert-danger">
+        <h3>Actualmente no se han ingresado ocupaciones a esta especialidad!</h3>
+    </div>
+}
+else
+{
+<table class="table">
+    <tr>
+        <th>
+            Ocupación
+        </th>
+        <th>
+            Funciones, tareas y actividades
+        </th>
+        <th>
+            Experiencia Relacionada
+        </th>
+        <th>
+            Nivel Educativo
+        </th>
+        <th>
+            Estudio requerido
+        </th>
+        <th>
+            Certificaciones Requeridas
+        </th>
+        <th>
+            Número de Cargos
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargos.Cargo)
+            (@item.AspNetUsers.Email.Substring(0, 15) )
+
+        </td>
+        <td>
+            @if (item.Caracteristicas.Length > 30) { 
+            @item.Caracteristicas.Substring(0, 30)
+            }
+            else { 
+             @item.Caracteristicas
+            }            
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExperienciaRelacionada.ExperienciaRelacionada1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NivelEducativo1.NivelEducativo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstudioRequerido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CertificacionesRequeridas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NoDeCargos1.RangoNoDeCargos)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalle", "Details", new { id=item.Id }) |
+           @if(User.IsInRole("JefeGH")){
+            <p>
+                @Html.ActionLink("Borrar", "Delete", new { id = item.Id })
+            </p>
+            }
+        </td>
+    </tr>
+}
+
+</table>
+}
+<ul class="pager">
+    <li class="previous">@Html.ActionLink("Volver a Especialidades", "../EmpresaEspecialidads/Index") </li>
+    <a class="btn btn-success " href="../../EncuestaPerfilesPetroleos/Create/@ViewBag.EspecilidadId">Agregar Ocupación</a>
+</ul>

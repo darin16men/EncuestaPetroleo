@@ -1,0 +1,807 @@
+﻿
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+   max-width: 598px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+.field-validation-valid {
+    display: none;
+}
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+.validation-summary-errors {
+    color: #b94a48;
+}
+.validation-summary-valid {
+    display: none;
+}
+
+#buscar_txt {
+    margin: auto;
+    padding: initial;
+    width: 21%;
+}
+#Index_Buscar {
+    width:100%; 
+    text-align:center
+}
+#logo_principal{
+    margin-top:3px;
+    height:40px;
+}
+    #logo_principal img {
+        height: 40px;
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+body {
+    background: url("/Content/images/fondo_SPE.fw.png");
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-attachment:fixed;
+}
+
+.Buscador_middle_form {
+    width:          100%;
+    top:            50%;
+    height:         50%;
+    text-align:     center;
+    margin:         auto;
+    margin-left:    -6%;
+}
+.buscarVacanteBoxMin{
+    position:fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    background: rgba(255,255,255,0.9);
+}
+.buscarVacanteBoxMin #logocontainer{
+    margin-left: 9px;
+    margin-top: 5px;
+}
+    .buscarVacanteBoxMin #logocontainer img{
+      /*
+        width: 170px;
+        height: 38px;
+          
+
+       width: 97px;
+       height: 40px;
+       margin-left: 15px;
+       margin-top: 5px;*/ 
+        width: 97px;
+        height: 40px;
+        margin-left: -3px;
+        margin-top: 0px;
+        margin-right: 15px;
+    }
+    
+    #MinImageAndForm{
+        display: inline-flex;
+        width:100%
+    }
+
+ 
+.vacante {
+    border: 1px solid gray;
+    border-radius:10px;
+    padding:1px;
+    padding-bottom:5px;
+    margin: 2px;
+    margin-bottom: 10px;
+   
+
+
+    background: rgb(160,160,160); /* Old browsers */
+    background: rgba(128, 128, 128, 0.12);
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk2OTY5NiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iNjElIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjAiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+background: -moz-linear-gradient(left,  rgba(150,150,150,0.5) 0%, rgba(255,255,255,0) 61%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(150,150,150,0.5)), color-stop(61%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(150,150,150,0.5) 0%,rgba(255,255,255,0) 61%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(150,150,150,0.5) 0%,rgba(255,255,255,0) 61%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(150,150,150,0.5) 0%,rgba(255,255,255,0) 61%); /* IE10+ */
+background: linear-gradient(to right,  rgba(150,150,150,0.5) 0%,rgba(255,255,255,0) 61%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80969696', endColorstr='#00ffffff',GradientType=1 ); /* IE6-8 */
+
+
+}
+.No_Vacantes_titulo, .Vacantes_fecha_vence_titulo, #vacante_visualizar_text{
+    font-weight:bold;
+}
+    .vacante header{
+         /*background: rgba(252, 220, 107, 0.30) !Important;
+               background: rgba(128, 128, 128, 0.30);*/
+             background: rgba(162, 162, 162, 0.3) !Important;
+          
+         margin-top: 0px;
+         border-radius: 10px 10px 0px 0px;
+         padding-top: 5px;
+         padding-left: 5px;
+    }
+    .vacante header h1{
+        font-size:16px;
+    }
+.vacante_detalle {
+    text-align: justify; 
+    margin-left: 10px; 
+    margin-right: 7px; 
+    margin-top: 5px; 
+    margin-bottom: 13px;
+}
+.vacante_image{
+    text-align:center;
+    margin:0px;
+    vertical-align:middle
+}
+    .vacante_image img{
+        /* width: 100px; */
+        width: 100%;
+        max-width: 200px;
+        margin-top: 7px;
+    }
+.vacanteEspacioInicial{
+    height:82px; 
+    width:100%; 
+}
+
+.navbar-fixed-top {
+        position:fixed;
+        top:0px;
+        right:0px;
+        left:0px;
+        padding-right: 6px;
+        padding-left: 11px;
+    }
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+color: #B92121;
+background-color: transparent;
+}
+
+#layout_footer{
+    background: rgba(255,255,255,0.9);
+    text-align:left;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+    left:0px;
+    padding-right: 6px;
+    padding-left: 11px;
+}
+.jumbotron{
+   /* background: rgba(251, 186, 24, 1)
+    background: rgba(251, 186, 24, 0.4);*/
+    background: rgba(248, 248, 248, 1);
+background: rgba(245, 245, 245, 0.4);
+}
+.jumbotron #buscar_resultado_txt{
+    height: 34px;
+    margin-top: 0px; 
+    font-size: 24px;
+    display: inline;
+    line-height: normal; 
+    width: 100%;
+}
+.jumbotron input{
+    margin-bottom: 8px !important;
+}
+.jumbotron h1{
+    font-size:20px;
+}
+ .vacante_image-tumbnail{
+        display:none
+    }
+
+
+/*********************************************************
+                       ADAPTATIVE RULES
+ *********************************************************/
+    /* Large desktop */
+ @media (min-width: 1200px) {
+    .Buscador_middle_form img {
+        margin-top: 10%;
+        margin-left: 14%;
+        width:500px;
+    }
+    #Index_Buscar{
+        margin-left: 10%;
+    }
+        #Index_Buscar #buscar_txt {
+            width: 500px;
+            max-width: 500px;
+            height:33px;
+            display:inline;
+        }
+        #Index_Buscar button{
+            display:inline;
+            width:160px;
+        }
+
+
+    #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+}
+
+ /** destop intermediate */
+@media(min-width: 980px) and (max-width:1199px) {
+    .Buscador_middle_form img {
+        margin-top: 8%;
+        margin-left: 14%;
+        width: 350px;
+    }
+    #Index_Buscar{
+        margin-left: 10%;
+    }
+        #Index_Buscar #buscar_txt {
+            width: 320px;
+            max-width: 320px;
+            height: 33px;
+            display: inline;
+        }
+        #Index_Buscar button{
+            display: inline;
+            width: 40px;
+            height: 33px;
+            margin-top: -4px;
+        }
+
+
+    #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+    #Index_Buscar #buscar_txt {
+        width: 100%;
+        height: 33px;
+        display: inline;
+    }
+    #Index_Buscar button{
+        display: inline;
+        width: 8%;
+        /* margin: auto; */
+        margin-top: -5px;
+    }
+    .Buscador_middle_form img{
+        margin-top: 20%;
+        width: 300px;
+    }
+
+     #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+   .vacante .vacante_image{
+       display:none;
+   }
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { 
+    .vacante-mini{
+        display: none
+    }
+    /**    HOME     **/
+    #Index_Buscar #buscar_txt {
+        width: 100%;
+        height: 33px;
+        display: inline;
+    }
+    #Index_Buscar button{
+        display: inline;
+        width: 8%;
+        /* margin: auto; */
+        margin-top: -5px;
+    }
+    .Buscador_middle_form img{
+        margin-top: 20%;
+        width: 300px;
+    }
+    #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    /**   BUSQUEDA  **/
+    .vacante .vacante_detalle {
+
+    }
+    .vacante .vacante_image{
+        display:none;
+    }
+    .vacante_data{
+        width:100%;
+    }
+     .vacante_data table{
+        width:100%;
+    }
+    .vacante_image-tumbnail{
+        display:inline
+    }
+    .vacante_image-tumbnail img{
+        width:90%
+    }
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+   #Index_Buscar #buscar_txt {
+        width: 100%;
+        height: 33px;
+        display: inline;
+    }
+    #Index_Buscar button{
+       display: inline;
+       width: 37px;
+       height: 32px;
+       margin-top: -3px;
+    }
+    .Buscador_middle_form img{
+        margin-top: 20%;
+        width: 300px;
+    }
+         #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+}
+@media (max-width: 406px){
+     #Index_Buscar #buscar_txt {
+        width: 60%;
+        height: 33px;
+        display: inline;
+    }
+    #Index_Buscar button{
+       display: inline;
+       width: 37px;
+       height: 32px;
+       margin-top: -3px;
+    }
+    .Buscador_middle_form img{
+        margin-top: 15%;
+        width: 236px;
+    }
+         #slogan{
+        position: fixed; 
+        bottom: 36px; 
+        right: -127px;
+    }
+
+        #slogan img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+}
+
+/** Altos menores a 500px*/
+@media (max-height:500px){
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+      #slogan{
+        position: fixed;
+        bottom: 36px;
+        right: -127px;
+    }
+
+        #slogan img{
+           width: 25%;
+            position: relative;
+            top: 0px;
+            right: -218px;
+        }
+}
+
+/** Altos menores a 340px*/
+@media (max-height:340px){
+    #prosperidad{
+        position: fixed; 
+        top: 55px; 
+        right: 15px;
+    }
+
+        #prosperidad img{
+            width: 50%; 
+            position: relative; 
+            top: 0px; 
+            right: -103px;
+        }
+      #slogan{
+        position: fixed;
+        bottom: 36px;
+        right: -127px;
+    }
+
+        #slogan img{
+           width: 15%;
+            position: relative;
+            top: 0px;
+            right: -284px;
+        }
+}
+
+/***********************************************************/
+/******************MAPA*CENTROS*DE*ATENCIÓN*****************/
+/***********************************************************/
+
+/* line 23, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-header .app-title {
+  font-size: 1.6875em;
+  line-height: 1.7037037037em;
+  color: #333;
+  margin: 20px 0;
+  padding: 0;
+}
+
+/* line 32, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-map #map-div {
+  width: 85%;
+  margin: auto auto;
+  overflow: hidden;
+  height: 600px;
+}
+
+@media only screen and (min-width: 1000px) {
+  /* line 40, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list {
+    height: 83%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+/* line 46, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department {
+  margin-bottom: 14.2857142857px;
+}
+/* line 48, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department h1, .m-offices-list .m-department h2, .m-offices-list .m-department h3, .m-offices-list .m-department p {
+  margin: 0;
+  padding: 0;
+}
+/* line 52, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name {
+  margin: 0;
+  padding: 0;
+  background: #666666;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+@media only screen and (min-width: 1000px) {
+  /* line 52, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name {
+    /* hover styles here */
+    font-size: 1.125em;
+    line-height: 1.2777777778em;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 52, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name {
+    /* non-hover styles here */
+    font-size: 1.125em;
+    line-height: 1.5555555556em;
+  }
+}
+/* line 67, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 2px 0;
+  padding-left: 30px;
+  background: #666666 url('../images/flecha_der.png?1395953565') no-repeat 7px center;
+}
+/* line 74, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name a:hover {
+  cursor: pointer;
+  background: #eb2126 url('../images/flecha_der.png?1395953565') no-repeat 7px center;
+}
+@media only screen and (min-width: 1000px) {
+  /* line 79, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name:hover {
+    /* hover styles here */
+    background: #eb2126;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 79, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name:hover {
+    /* non-hover styles here */
+  }
+}
+/* line 88, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name:active {
+  background: #888;
+}
+/* line 91, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name.active {
+  background: #eb2126;
+}
+/* line 93, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .department-name.active a {
+  background: #eb2126 url('../images/flecha_abajo.png?1395953552') no-repeat 5px center;
+}
+@media only screen and (min-width: 1000px) {
+  /* line 93, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name.active a {
+    /* hover styles here */
+    background: #eb2126 url('../images/flecha_abajo.png?1395953552') no-repeat 5px center;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 93, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name.active a {
+    /* non-hover styles here */
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* line 103, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name.active:hover {
+    /* hover styles here */
+    background: #eb2126;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 103, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .department-name.active:hover {
+    /* non-hover styles here */
+  }
+}
+/* line 114, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department {
+  display: none;
+}
+/* line 116, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city {
+  margin-bottom: 10px;
+  padding-left: 20px;
+}
+/* line 119, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .city-name {
+  background: #ccc;
+  color: #333;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  font-weight: normal;
+}
+@media only screen and (min-width: 1000px) {
+  /* line 119, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name {
+    /* hover styles here */
+    font-size: 1.0625em;
+    line-height: 1.3529411765em;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 119, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name {
+    /* non-hover styles here */
+    font-size: 1.0625em;
+    line-height: 1.5294117647em;
+  }
+}
+/* line 133, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .city-name a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 2px 0;
+}
+@media only screen and (min-width: 1000px) {
+  /* line 138, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name a:hover {
+    /* hover styles here */
+    color: #000;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 138, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name a:hover {
+    /* non-hover styles here */
+  }
+}
+@media only screen and (min-width: 1000px) {
+  /* line 149, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name:hover {
+    background: #bbb;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* line 149, ../../mapa_app/sass-mapa/sass/styles.scss */
+  .m-offices-list .m-department .content-department .m-city .city-name:hover {
+    /* non-hover styles here */
+  }
+}
+/* line 157, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .city-name:active {
+  background: #999;
+}
+/* line 161, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city {
+  display: none;
+}
+/* line 163, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city .m-office {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 13.3333333333px;
+  margin-bottom: 13.3333333333px;
+}
+/* line 167, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city .m-office .office-name {
+  font-size: 0.9375em;
+  line-height: 1.5333333333em;
+  color: #333;
+  font-weight: bold;
+}
+/* line 172, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city .m-office p {
+  font-size: 0.9375em;
+  line-height: 1.5333333333em;
+  margin: 0;
+  padding: 0;
+}
+/* line 177, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city .m-office .contact-info {
+  color: red;
+}
+/* line 181, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department .m-city .content-city.active {
+  display: block;
+}
+/* line 186, ../../mapa_app/sass-mapa/sass/styles.scss */
+.m-offices-list .m-department .content-department.active {
+  display: block;
+}

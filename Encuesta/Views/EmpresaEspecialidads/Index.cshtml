@@ -1,0 +1,115 @@
+﻿@model IEnumerable<Encuesta.Models.EmpresaEspecialidad>
+
+@{
+    ViewBag.Title = "Especilidades Empresa";
+}
+
+<h2>Especialidades de la empresa</h2>
+<p class="text-success">@ViewBag.StatusMessage</p>
+<p> 
+    @Html.ActionLink("Agregar Especialidad", "Create", new { id = ViewBag.EspecilidadId }, new { @class = "btn btn-primary btn-lg" })
+</p>
+
+@if (Model.Count() == 0)
+{
+    <div class="alert-danger">
+        <h4>Actualmente no se han registro Especialidades de la empresa!!</h4>
+    </div>
+}
+else
+{
+    <table class="table">
+        <tr>
+            <th>
+                Especialidades de la empresa
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtraEspecialidad.OtraEspecialidad1)
+                </td>
+                <td>
+                    @if (ViewBag.rol == "jefe" && !item.EspecialidadCulminada && !item.NoAplica)
+                    {
+                        <span>
+                            @Html.ActionLink("Agregar Ocupaciones ", "../EncuestaPerfilesPetroleos/Create", new { id = item.Especialidadid }) |
+                            @Html.ActionLink("Ocupaciones Ingresadas", "../EncuestaPerfilesPetroleos/Index", new { id = item.Especialidadid })
+
+                            @if (item.OtraEspecialidad.EncuestaPerfilesPetroleo.Where(x => x.Empresa_id.Equals(item.EmpresaId)).Count() > 0)
+                            {
+                                @Html.ActionLink("Validar Especialidad", "../PersonasReunionesPerfiles/Index/", new { id = item.Especialidadid }, new { @class = "btn btn-warning btn-xs" })
+                                @*<a class="btn btn-warning btn-xs" href="../PersonasReunionesPerfiles/Index/@item.Especialidadid ">Validar Especialidad</a>*@
+                            }
+                            else if (ViewBag.rol == "jefe" && !item.EspecialidadCulminada && !item.NoAplica)
+                            {
+                                <a class="confirmaplica btn btn-info btn-xs" href=#>Marcar especialidad como no Aplica</a>                                
+                                @Html.ActionLink("r", "../CulminacionesForEspacialidads/NoAplica/", new { id = item.Especialidadid }, new { @class = "hidden culminarokaplica" })
+
+                                <!-- bootbox code -->
+                                @Scripts.Render("~/bundles/bootbox")
+                                <script>
+                                    bootbox.setDefaults({ locale: "es" });
+                                    $(document).on("click", ".confirm", function (e) {
+                                        bootbox.confirm("<h2 class='alert-info'>Esta seguro de  culminar esta especialidad!</h2>", function (result) {
+                                            if (result) {
+                                                $(".culminarok")[0].click();
+                                            }
+                                        });
+                                    });
+                                </script>
+                                <script>
+                                $(document).on("click", ".confirmaplica", function (e) {
+                                    bootbox.confirm("<h2 class='alert-danger'>Esta seguro de Marcar especialidad como no Aplica!</h2>",  function (result) {
+                                        if (result) {
+                                            $(".culminarokaplica")[0].click();
+                                        }
+                                    });
+                                });
+                                </script>
+                            }
+                             
+                        </span>
+                    }
+                    @if (ViewBag.rol == "noJefe" && !item.EspecialidadCulminada && !item.NoAplica)
+                    {
+                        <span>
+                            @Html.ActionLink("Agregar Ocupaciones ", "../EncuestaPerfilesPetroleos/Create", new { id = item.Especialidadid }) |
+                            @Html.ActionLink("Ocupaciones Ingresadas", "../EncuestaPerfilesPetroleos/Index", new { id = item.Especialidadid })
+                        </span>
+                    }
+                    @if (ViewBag.rol == "jefe" && item.EspecialidadCulminada && !item.NoAplica)
+                    {
+                        <a class="btn btn-success btn-xs disabled" href="">Especialidad Culminada</a>
+                    }
+                    @if (ViewBag.rol == "noJefe" && item.EspecialidadCulminada && !item.NoAplica)
+                    {
+                        <a class="btn btn-success btn-xs disabled" href="">Especialidad Culminada</a>
+                    }
+
+                    @if (ViewBag.rol == "jefe" && !item.EspecialidadCulminada && item.NoAplica)
+                    {
+                        <a class="btn btn-default btn-xs disabled" href="">No Aplica</a>
+                    }
+
+                    @if (ViewBag.rol == "noJefe" && !item.EspecialidadCulminada && item.NoAplica)
+                    {
+                        <a class="btn btn-default btn-xs disabled" href="">No Aplica</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+@if (ViewBag.Culminada == "Exito" && ViewBag.rol == "jefe")
+{
+      @Html.ActionLink("Culminar Encuesta", "../CulminacionFinals/Culminar", "Culminar", new { @class = "btn btn-success btn-lg" })
+}
+@if (ViewBag.Culminada == "si" && ViewBag.rol == "jefe")
+{
+    <a class="btn btn-success btn-lg disabled">Encuesta Culminada Exitosamente</a>
+}

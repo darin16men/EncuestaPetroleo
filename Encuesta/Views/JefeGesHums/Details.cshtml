@@ -1,0 +1,48 @@
+﻿@model Encuesta.Models.JefeGesHum
+
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<h2>@ViewBag.Title </h2>
+
+<div>
+    <h4>Jefe de Gestion Humana</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CedulaCiudadania)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CedulaCiudadania)
+        </dd>
+        <dt>
+            Empresa
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.Empresa1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) 
+</p>

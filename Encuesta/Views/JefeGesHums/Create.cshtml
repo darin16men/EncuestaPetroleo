@@ -1,0 +1,99 @@
+﻿@model Encuesta.Models.JefeGesHum
+
+@{
+    ViewBag.Title = "Datos Jefe Gestión Humana";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Nombre, "Nombre Completo", htmlAttributes: new { @class = "control-label col-md-2" })
+
+
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control validate[required,maxSize[140],custom[onlyLetterNumberSp]" } })
+                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Cargo, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Cargo, new { htmlAttributes = new { @class = "form-control validate[required,maxSize[140],custom[onlyLetterNumberSp]" } })
+                @Html.ValidationMessageFor(model => model.Cargo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Profesion">Profesión</label>
+            <div class="col-md-10">
+                <input class="form-control validate[required,maxSize[140],custom[onlyLetterNumberSp] text-box single-line" id="Profesion" name="Profesion" type="text" value="@ViewBag.Profesion">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Profesion" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Dependencia">Dependencia</label>
+            <div class="col-md-10">
+                <input class="form-control validate[required,maxSize[140],custom[onlyLetterNumberSp] text-box single-line" id="Dependencia" name="Dependencia" type="text" value="@ViewBag.Dependencia">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Dependencia" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.CedulaCiudadania, "Cédula Ciudadanía", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CedulaCiudadania, new { htmlAttributes = new { @class = "form-control validate[required,maxSize[140],custom[onlyNumber]" } })
+                @Html.ValidationMessageFor(model => model.CedulaCiudadania, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Telefono, "Teléfono", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Telefono, new { htmlAttributes = new { @class = "input-medium form-control  validate[required,custom[phone]]", @placeholder = "Teléfono ", @required = "required", @type = "tel" } })
+                @Html.ValidationMessageFor(model => model.Telefono, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Celular, "Celular", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Celular, new { htmlAttributes = new { @class = "input-medium form-control  validate[required,custom[phone]]", @placeholder = "Celular", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.Celular, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CorreoElectronioco, "Correo Electrónico", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CorreoElectronioco, new { htmlAttributes = new { @class = "form-control validate[required,custom[email]]",  @type = "email"} })
+                @Html.ValidationMessageFor(model => model.CorreoElectronioco, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Direccion, "Dirección", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Direccion, new { htmlAttributes = new { @class = "form-control validate[required,maxSize[140],custom[onlyLetterNumberSp]]" } })
+                @Html.ValidationMessageFor(model => model.Direccion, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <h5>
+            @Html.ViewBag.message
+        </h5>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

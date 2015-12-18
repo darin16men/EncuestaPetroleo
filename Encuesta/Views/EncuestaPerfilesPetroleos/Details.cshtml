@@ -1,0 +1,73 @@
+﻿@model Encuesta.Models.EncuestaPerfilesPetroleo
+
+@{
+    ViewBag.Title = "Detalle Cargo";
+}
+
+<h2>Detalle  Ocupación @Html.DisplayFor(model => model.Cargos.Cargo)</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caracteristicas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caracteristicas)
+        </dd>
+
+        <dt>
+            Experiencia Relacionada
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperienciaRelacionada.ExperienciaRelacionada1)
+        </dd>
+
+        <dt>
+           Nivel Educativo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NivelEducativo1.NivelEducativo1)
+        </dd>
+        <dt>
+            Estudio Requerido
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstudioRequerido)
+        </dd>
+        <dt>
+            Numero de Cargos
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoDeCargos1.RangoNoDeCargos)
+        </dd>
+
+        <dt>
+             Especilidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtraEspecialidad.OtraEspecialidad1)
+        </dd>
+
+        <dt>
+            Certificaciones Requeridas
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificacionesRequeridas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Volver al Listado", "Index/" + Model.OtraEspecialidad_id)
+</p>

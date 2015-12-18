@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Encuesta.Models.AspNetUsers>
+
+@{
+    ViewBag.Title = "Listado de Usuarios ";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo usuario diligenciador", "Crear")
+</p>
+<p>
+    <h5>
+        @Html.ViewBag.user_id
+    </h5>
+</p>
+<div class="row">
+    <div class="col-md-8">
+        <table class="table">
+            <tr>
+                <th>
+                    Usuario
+                </th>
+                @*Add a table header for the Address info:*@
+                <th>
+
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", new { id = item.Id }) |
+                        @*@Html.ActionLink("Borrar", "Eliminar", new { id = item.Id })*@
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+
+    </div>
+</div>
+        

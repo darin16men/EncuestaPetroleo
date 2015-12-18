@@ -1,0 +1,1279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EncuestaPetroleo.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="PostalCode" Type="nvarchar(max)" />
+          <Property Name="EmpresaId" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+          <Property Name="Activo" Type="bit" Nullable="false" />
+          <Property Name="PasswordChange" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="200" />
+          <Property Name="EspecialidadId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CulminacionFinal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpresaId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="FechaCulminacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empresa" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="NoTotalTrabajadores" Type="int" Nullable="false" />
+          <Property Name="Nit" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="EmpresaEspecialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpresaId" Type="int" Nullable="false" />
+          <Property Name="Especialidadid" Type="int" Nullable="false" />
+          <Property Name="EspecialidadCulminada" Type="bit" />
+          <Property Name="NoAplica" Type="bit" />
+          <Property Name="FechaCulminacion" Type="datetime" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="EncuestaPerfilesPetroleo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cargo" Type="int" Nullable="false" />
+          <Property Name="CertificacionesRequeridas" Type="nvarchar" MaxLength="300" />
+          <Property Name="ExperienciaRelacionada_id" Type="int" Nullable="false" />
+          <Property Name="NivelEducativo" Type="int" Nullable="false" />
+          <Property Name="NoDeCargos" Type="int" Nullable="false" />
+          <Property Name="Caracteristicas" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Empresa_id" Type="int" Nullable="false" />
+          <Property Name="Diligencia_id" Type="int" Nullable="false" />
+          <Property Name="FechaDiligencia" Type="datetime" Nullable="false" />
+          <Property Name="Especialidad_id" Type="int" Nullable="false" />
+          <Property Name="OtraEspecialidad_id" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="EstudioRequerido" Type="varchar" MaxLength="300" />
+          <Property Name="Observaciones" Type="varchar" MaxLength="2000" />
+          <Property Name="DescripcionOcupacion" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="Especialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Especialidad" Type="char" MaxLength="40" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExperienciaRelacionada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ExperienciaRelacionada" Type="char" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="JefeGesHum">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CedulaCiudadania" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="EmpresaId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="Celular" Type="bigint" />
+          <Property Name="CorreoElectronioco" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Profesion" Type="varchar" MaxLength="1" />
+          <Property Name="Dependencia" Type="varchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="NivelEducativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NivelEducativo" Type="char" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="NoDeCargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RangoNoDeCargos" Type="char" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OtraEspecialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OtraEspecialidad" Type="char" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PassEmpresas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empresa" Type="varchar" MaxLength="300" />
+          <Property Name="ClaveINI" Type="varchar" MaxLength="200" />
+          <Property Name="UsurioCorreo" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="PersonaDiligencia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCompleto" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Cargo" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Profesion" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Dependencia" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Telefono" Type="int" Nullable="false" />
+          <Property Name="Celular" Type="varchar" MaxLength="255" />
+          <Property Name="Empresa_id" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+        </EntityType>
+        <EntityType Name="PersonasReunionesPerfiles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Profesion" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CargoDependencia" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="CorreoElectronico" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="TelefonoCelular" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="EmpresaId" Type="int" Nullable="false" />
+          <Property Name="EspecialidadId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoCago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Tipo" Type="char" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK__Cargos__Especial__300424B4">
+          <End Role="OtraEspecialidad" Type="Self.OtraEspecialidad" Multiplicity="1" />
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cargos">
+              <PropertyRef Name="EspecialidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Culminaci__Empre__5070F446">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="CulminacionFinal" Type="Self.CulminacionFinal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CulminacionFinal">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Empresa__UserID__403A8C7D">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empresa">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpresaEs__Empre__412EB0B6">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="EmpresaEspecialidad" Type="Self.EmpresaEspecialidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpresaEspecialidad">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpresaEs__Espec__4222D4EF">
+          <End Role="OtraEspecialidad" Type="Self.OtraEspecialidad" Multiplicity="1" />
+          <End Role="EmpresaEspecialidad" Type="Self.EmpresaEspecialidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpresaEspecialidad">
+              <PropertyRef Name="Especialidadid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Cargo__02FC7413">
+          <End Role="Cargos" Type="Self.Cargos" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Cargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Dilig__03F0984C">
+          <End Role="PersonaDiligencia" Type="Self.PersonaDiligencia" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaDiligencia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Diligencia_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Empre__04E4BC85">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Espec__05D8E0BE">
+          <End Role="Especialidad" Type="Self.Especialidad" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Especialidad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Exper__06CD04F7">
+          <End Role="ExperienciaRelacionada" Type="Self.ExperienciaRelacionada" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExperienciaRelacionada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="ExperienciaRelacionada_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Nivel__07C12930">
+          <End Role="NivelEducativo" Type="Self.NivelEducativo" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NivelEducativo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="NivelEducativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__NoDeC__08B54D69">
+          <End Role="NoDeCargos" Type="Self.NoDeCargos" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoDeCargos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="NoDeCargos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__OtraE__09A971A2">
+          <End Role="OtraEspecialidad" Type="Self.OtraEspecialidad" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="OtraEspecialidad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__UserI__0A9D95DB">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="EncuestaPerfilesPetroleo" Type="Self.EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__JefeGesHu__Empre__4CA06362">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="JefeGesHum" Type="Self.JefeGesHum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JefeGesHum">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonaDi__Empre__4D94879B">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="PersonaDiligencia" Type="Self.PersonaDiligencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaDiligencia">
+              <PropertyRef Name="Empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonasR__Empre__3A4CA8FD">
+          <End Role="Empresa" Type="Self.Empresa" Multiplicity="1" />
+          <End Role="PersonasReunionesPerfiles" Type="Self.PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonasR__Espec__1AD3FDA4">
+          <End Role="OtraEspecialidad" Type="Self.OtraEspecialidad" Multiplicity="1" />
+          <End Role="PersonasReunionesPerfiles" Type="Self.PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="EspecialidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonasR__UserI__3B40CD36">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="PersonasReunionesPerfiles" Type="Self.PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EncuestaPetroleoStoreContainer">
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cargos" EntityType="Self.Cargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CulminacionFinal" EntityType="Self.CulminacionFinal" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empresa" EntityType="Self.Empresa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EmpresaEspecialidad" EntityType="Self.EmpresaEspecialidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EncuestaPerfilesPetroleo" EntityType="Self.EncuestaPerfilesPetroleo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Especialidad" EntityType="Self.Especialidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExperienciaRelacionada" EntityType="Self.ExperienciaRelacionada" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="JefeGesHum" EntityType="Self.JefeGesHum" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NivelEducativo" EntityType="Self.NivelEducativo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NoDeCargos" EntityType="Self.NoDeCargos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OtraEspecialidad" EntityType="Self.OtraEspecialidad" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PassEmpresas" EntityType="Self.PassEmpresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonaDiligencia" EntityType="Self.PersonaDiligencia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PersonasReunionesPerfiles" EntityType="Self.PersonasReunionesPerfiles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoCago" EntityType="Self.TipoCago" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Cargos__Especial__300424B4" Association="Self.FK__Cargos__Especial__300424B4">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="Cargos" EntitySet="Cargos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Culminaci__Empre__5070F446" Association="Self.FK__Culminaci__Empre__5070F446">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="CulminacionFinal" EntitySet="CulminacionFinal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Empresa__UserID__403A8C7D" Association="Self.FK__Empresa__UserID__403A8C7D">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Empresa" EntitySet="Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpresaEs__Empre__412EB0B6" Association="Self.FK__EmpresaEs__Empre__412EB0B6">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EmpresaEspecialidad" EntitySet="EmpresaEspecialidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpresaEs__Espec__4222D4EF" Association="Self.FK__EmpresaEs__Espec__4222D4EF">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="EmpresaEspecialidad" EntitySet="EmpresaEspecialidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Cargo__02FC7413" Association="Self.FK__EncuestaP__Cargo__02FC7413">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Dilig__03F0984C" Association="Self.FK__EncuestaP__Dilig__03F0984C">
+            <End Role="PersonaDiligencia" EntitySet="PersonaDiligencia" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Empre__04E4BC85" Association="Self.FK__EncuestaP__Empre__04E4BC85">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Espec__05D8E0BE" Association="Self.FK__EncuestaP__Espec__05D8E0BE">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Exper__06CD04F7" Association="Self.FK__EncuestaP__Exper__06CD04F7">
+            <End Role="ExperienciaRelacionada" EntitySet="ExperienciaRelacionada" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Nivel__07C12930" Association="Self.FK__EncuestaP__Nivel__07C12930">
+            <End Role="NivelEducativo" EntitySet="NivelEducativo" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__NoDeC__08B54D69" Association="Self.FK__EncuestaP__NoDeC__08B54D69">
+            <End Role="NoDeCargos" EntitySet="NoDeCargos" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__OtraE__09A971A2" Association="Self.FK__EncuestaP__OtraE__09A971A2">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__UserI__0A9D95DB" Association="Self.FK__EncuestaP__UserI__0A9D95DB">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__JefeGesHu__Empre__4CA06362" Association="Self.FK__JefeGesHu__Empre__4CA06362">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="JefeGesHum" EntitySet="JefeGesHum" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonaDi__Empre__4D94879B" Association="Self.FK__PersonaDi__Empre__4D94879B">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="PersonaDiligencia" EntitySet="PersonaDiligencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonasR__Empre__3A4CA8FD" Association="Self.FK__PersonasR__Empre__3A4CA8FD">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonasR__Espec__1AD3FDA4" Association="Self.FK__PersonasR__Espec__1AD3FDA4">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonasR__UserI__3B40CD36" Association="Self.FK__PersonasR__UserI__3B40CD36">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EncuestaPetroleo" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TipoCago">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Tipo" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="EncuestaPetroleoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TipoCago" EntityType="Self.TipoCago" />
+          <EntitySet Name="AspNetUsers" EntityType="EncuestaPetroleo.AspNetUsers" />
+          <EntitySet Name="Cargos" EntityType="EncuestaPetroleo.Cargos" />
+          <EntitySet Name="CulminacionFinal" EntityType="EncuestaPetroleo.CulminacionFinal" />
+          <EntitySet Name="Empresa" EntityType="EncuestaPetroleo.Empresa" />
+          <EntitySet Name="EmpresaEspecialidad" EntityType="EncuestaPetroleo.EmpresaEspecialidad" />
+          <EntitySet Name="Especialidad" EntityType="EncuestaPetroleo.Especialidad" />
+          <EntitySet Name="ExperienciaRelacionada" EntityType="EncuestaPetroleo.ExperienciaRelacionada" />
+          <EntitySet Name="NivelEducativo" EntityType="EncuestaPetroleo.NivelEducativo" />
+          <EntitySet Name="NoDeCargos" EntityType="EncuestaPetroleo.NoDeCargos" />
+          <EntitySet Name="OtraEspecialidad" EntityType="EncuestaPetroleo.OtraEspecialidad" />
+          <EntitySet Name="PersonaDiligencia" EntityType="EncuestaPetroleo.PersonaDiligencia" />
+          <EntitySet Name="PersonasReunionesPerfiles" EntityType="EncuestaPetroleo.PersonasReunionesPerfiles" />
+          <AssociationSet Name="FK__Empresa__UserID__4BAC3F29" Association="EncuestaPetroleo.FK__Empresa__UserID__4BAC3F29">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="Empresa" EntitySet="Empresa" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cargos__Especial__04E4BC85" Association="EncuestaPetroleo.FK__Cargos__Especial__04E4BC85">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="Cargos" EntitySet="Cargos" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Culminaci__Empre__19DFD96B" Association="EncuestaPetroleo.FK__Culminaci__Empre__19DFD96B">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="CulminacionFinal" EntitySet="CulminacionFinal" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpresaEs__Empre__73BA3083" Association="EncuestaPetroleo.FK__EmpresaEs__Empre__73BA3083">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EmpresaEspecialidad" EntitySet="EmpresaEspecialidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__" Association="EncuestaPetroleo.FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="PersonaDiligencia" EntitySet="PersonaDiligencia" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EmpresaEs__Espec__74AE54BC" Association="EncuestaPetroleo.FK__EmpresaEs__Espec__74AE54BC">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="EmpresaEspecialidad" EntitySet="EmpresaEspecialidad" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonasR__Espec__1AD3FDA4" Association="EncuestaPetroleo.FK__PersonasR__Espec__1AD3FDA4">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+          <EntitySet Name="JefeGesHum" EntityType="EncuestaPetroleo.JefeGesHum" />
+          <AssociationSet Name="FK__JefeGesHu__Empre__4CA06362" Association="EncuestaPetroleo.FK__JefeGesHu__Empre__4CA06362">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="JefeGesHum" EntitySet="JefeGesHum" />
+          </AssociationSet>
+          <EntitySet Name="EncuestaPerfilesPetroleo" EntityType="EncuestaPetroleo.EncuestaPerfilesPetroleo" />
+          <AssociationSet Name="FK__EncuestaP__UserI__0A9D95DB" Association="EncuestaPetroleo.FK__EncuestaP__UserI__0A9D95DB">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Cargo__02FC7413" Association="EncuestaPetroleo.FK__EncuestaP__Cargo__02FC7413">
+            <End Role="Cargos" EntitySet="Cargos" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Empre__04E4BC85" Association="EncuestaPetroleo.FK__EncuestaP__Empre__04E4BC85">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Dilig__03F0984C" Association="EncuestaPetroleo.FK__EncuestaP__Dilig__03F0984C">
+            <End Role="PersonaDiligencia" EntitySet="PersonaDiligencia" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Espec__05D8E0BE" Association="EncuestaPetroleo.FK__EncuestaP__Espec__05D8E0BE">
+            <End Role="Especialidad" EntitySet="Especialidad" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Exper__06CD04F7" Association="EncuestaPetroleo.FK__EncuestaP__Exper__06CD04F7">
+            <End Role="ExperienciaRelacionada" EntitySet="ExperienciaRelacionada" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__Nivel__07C12930" Association="EncuestaPetroleo.FK__EncuestaP__Nivel__07C12930">
+            <End Role="NivelEducativo" EntitySet="NivelEducativo" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__NoDeC__08B54D69" Association="EncuestaPetroleo.FK__EncuestaP__NoDeC__08B54D69">
+            <End Role="NoDeCargos" EntitySet="NoDeCargos" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <AssociationSet Name="FK__EncuestaP__OtraE__09A971A2" Association="EncuestaPetroleo.FK__EncuestaP__OtraE__09A971A2">
+            <End Role="OtraEspecialidad" EntitySet="OtraEspecialidad" />
+            <End Role="EncuestaPerfilesPetroleo" EntitySet="EncuestaPerfilesPetroleo" />
+          </AssociationSet>
+          <EntitySet Name="PassEmpresas" EntityType="EncuestaPetroleo.PassEmpresas" />
+          <AssociationSet Name="FK__PersonasR__UserI__3B40CD36" Association="EncuestaPetroleo.FK__PersonasR__UserI__3B40CD36">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PersonasR__Empre__3A4CA8FD" Association="EncuestaPetroleo.FK__PersonasR__Empre__3A4CA8FD">
+            <End Role="Empresa" EntitySet="Empresa" />
+            <End Role="PersonasReunionesPerfiles" EntitySet="PersonasReunionesPerfiles" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostalCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__Empresa__UserID__4BAC3F29" FromRole="AspNetUsers" ToRole="Empresa" />
+          <Property Name="Activo" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordChange" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__UserI__0A9D95DB" FromRole="AspNetUsers" ToRole="EncuestaPerfilesPetroleo" />
+          <NavigationProperty Name="PersonasReunionesPerfiles" Relationship="EncuestaPetroleo.FK__PersonasR__UserI__3B40CD36" FromRole="AspNetUsers" ToRole="PersonasReunionesPerfiles" />
+        </EntityType>
+        <EntityType Name="Cargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cargo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="EspecialidadId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="OtraEspecialidad" Relationship="EncuestaPetroleo.FK__Cargos__Especial__04E4BC85" FromRole="Cargos" ToRole="OtraEspecialidad" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Cargo__02FC7413" FromRole="Cargos" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="CulminacionFinal">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="FechaCulminacion" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__Culminaci__Empre__19DFD96B" FromRole="CulminacionFinal" ToRole="Empresa" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empresa1" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="NoTotalTrabajadores" Type="Int32" Nullable="false" />
+          <Property Name="Nit" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="EncuestaPetroleo.FK__Empresa__UserID__4BAC3F29" FromRole="Empresa" ToRole="AspNetUsers" />
+          <NavigationProperty Name="CulminacionFinal" Relationship="EncuestaPetroleo.FK__Culminaci__Empre__19DFD96B" FromRole="Empresa" ToRole="CulminacionFinal" />
+          <NavigationProperty Name="EmpresaEspecialidad" Relationship="EncuestaPetroleo.FK__EmpresaEs__Empre__73BA3083" FromRole="Empresa" ToRole="EmpresaEspecialidad" />
+          <NavigationProperty Name="PersonaDiligencia" Relationship="EncuestaPetroleo.FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__" FromRole="Empresa" ToRole="PersonaDiligencia" />
+          <NavigationProperty Name="JefeGesHum" Relationship="EncuestaPetroleo.FK__JefeGesHu__Empre__4CA06362" FromRole="Empresa" ToRole="JefeGesHum" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Empre__04E4BC85" FromRole="Empresa" ToRole="EncuestaPerfilesPetroleo" />
+          <NavigationProperty Name="PersonasReunionesPerfiles" Relationship="EncuestaPetroleo.FK__PersonasR__Empre__3A4CA8FD" FromRole="Empresa" ToRole="PersonasReunionesPerfiles" />
+        </EntityType>
+        <EntityType Name="EmpresaEspecialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" />
+          <Property Name="Especialidadid" Type="Int32" Nullable="false" />
+          <Property Name="EspecialidadCulminada" Type="Boolean" />
+          <Property Name="NoAplica" Type="Boolean" />
+          <Property Name="FechaCulminacion" Type="DateTime" Precision="3" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__EmpresaEs__Empre__73BA3083" FromRole="EmpresaEspecialidad" ToRole="Empresa" />
+          <NavigationProperty Name="OtraEspecialidad" Relationship="EncuestaPetroleo.FK__EmpresaEs__Espec__74AE54BC" FromRole="EmpresaEspecialidad" ToRole="OtraEspecialidad" />
+        </EntityType>
+        <EntityType Name="Especialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Especialidad1" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Espec__05D8E0BE" FromRole="Especialidad" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="ExperienciaRelacionada">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ExperienciaRelacionada1" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Exper__06CD04F7" FromRole="ExperienciaRelacionada" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="NivelEducativo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NivelEducativo1" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Nivel__07C12930" FromRole="NivelEducativo" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="NoDeCargos">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RangoNoDeCargos" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__NoDeC__08B54D69" FromRole="NoDeCargos" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="OtraEspecialidad">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OtraEspecialidad1" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Cargos" Relationship="EncuestaPetroleo.FK__Cargos__Especial__04E4BC85" FromRole="OtraEspecialidad" ToRole="Cargos" />
+          <NavigationProperty Name="EmpresaEspecialidad" Relationship="EncuestaPetroleo.FK__EmpresaEs__Espec__74AE54BC" FromRole="OtraEspecialidad" ToRole="EmpresaEspecialidad" />
+          <NavigationProperty Name="PersonasReunionesPerfiles" Relationship="EncuestaPetroleo.FK__PersonasR__Espec__1AD3FDA4" FromRole="OtraEspecialidad" ToRole="PersonasReunionesPerfiles" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__OtraE__09A971A2" FromRole="OtraEspecialidad" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="PersonaDiligencia">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCompleto" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Profesion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Dependencia" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="Int32" Nullable="false" />
+          <Property Name="Celular" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Empresa_id" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__" FromRole="PersonaDiligencia" ToRole="Empresa" />
+          <NavigationProperty Name="EncuestaPerfilesPetroleo" Relationship="EncuestaPetroleo.FK__EncuestaP__Dilig__03F0984C" FromRole="PersonaDiligencia" ToRole="EncuestaPerfilesPetroleo" />
+        </EntityType>
+        <EntityType Name="PersonasReunionesPerfiles">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Profesion" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CargoDependencia" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CorreoElectronico" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="TelefonoCelular" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" />
+          <Property Name="EspecialidadId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OtraEspecialidad" Relationship="EncuestaPetroleo.FK__PersonasR__Espec__1AD3FDA4" FromRole="PersonasReunionesPerfiles" ToRole="OtraEspecialidad" />
+          <NavigationProperty Name="AspNetUsers" Relationship="EncuestaPetroleo.FK__PersonasR__UserI__3B40CD36" FromRole="PersonasReunionesPerfiles" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__PersonasR__Empre__3A4CA8FD" FromRole="PersonasReunionesPerfiles" ToRole="Empresa" />
+        </EntityType>
+        <Association Name="FK__Empresa__UserID__4BAC3F29">
+          <End Type="EncuestaPetroleo.AspNetUsers" Role="AspNetUsers" Multiplicity="0..1" />
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Empresa">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cargos__Especial__04E4BC85">
+          <End Type="EncuestaPetroleo.OtraEspecialidad" Role="OtraEspecialidad" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.Cargos" Role="Cargos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Cargos">
+              <PropertyRef Name="EspecialidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Culminaci__Empre__19DFD96B">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.CulminacionFinal" Role="CulminacionFinal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CulminacionFinal">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpresaEs__Empre__73BA3083">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EmpresaEspecialidad" Role="EmpresaEspecialidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpresaEspecialidad">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.PersonaDiligencia" Role="PersonaDiligencia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonaDiligencia">
+              <PropertyRef Name="Empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EmpresaEs__Espec__74AE54BC">
+          <End Type="EncuestaPetroleo.OtraEspecialidad" Role="OtraEspecialidad" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EmpresaEspecialidad" Role="EmpresaEspecialidad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EmpresaEspecialidad">
+              <PropertyRef Name="Especialidadid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonasR__Espec__1AD3FDA4">
+          <End Type="EncuestaPetroleo.OtraEspecialidad" Role="OtraEspecialidad" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.PersonasReunionesPerfiles" Role="PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="EspecialidadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="JefeGesHum">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Cargo" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="CedulaCiudadania" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="EmpresaId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="Int32" Nullable="false" />
+          <Property Name="Celular" Type="Int64" />
+          <Property Name="CorreoElectronioco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Profesion" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Dependencia" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__JefeGesHu__Empre__4CA06362" FromRole="JefeGesHum" ToRole="Empresa" />
+        </EntityType>
+        <Association Name="FK__JefeGesHu__Empre__4CA06362">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.JefeGesHum" Role="JefeGesHum" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="JefeGesHum">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="EncuestaPerfilesPetroleo">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cargo" Type="Int32" Nullable="false" />
+          <Property Name="CertificacionesRequeridas" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="ExperienciaRelacionada_id" Type="Int32" Nullable="false" />
+          <Property Name="NivelEducativo" Type="Int32" Nullable="false" />
+          <Property Name="NoDeCargos" Type="Int32" Nullable="false" />
+          <Property Name="Caracteristicas" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Empresa_id" Type="Int32" Nullable="false" />
+          <Property Name="Diligencia_id" Type="Int32" Nullable="false" />
+          <Property Name="FechaDiligencia" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Especialidad_id" Type="Int32" Nullable="false" />
+          <Property Name="OtraEspecialidad_id" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="EstudioRequerido" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="Observaciones" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="DescripcionOcupacion" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="AspNetUsers" Relationship="EncuestaPetroleo.FK__EncuestaP__UserI__0A9D95DB" FromRole="EncuestaPerfilesPetroleo" ToRole="AspNetUsers" />
+          <NavigationProperty Name="Cargos" Relationship="EncuestaPetroleo.FK__EncuestaP__Cargo__02FC7413" FromRole="EncuestaPerfilesPetroleo" ToRole="Cargos" />
+          <NavigationProperty Name="Empresa" Relationship="EncuestaPetroleo.FK__EncuestaP__Empre__04E4BC85" FromRole="EncuestaPerfilesPetroleo" ToRole="Empresa" />
+          <NavigationProperty Name="PersonaDiligencia" Relationship="EncuestaPetroleo.FK__EncuestaP__Dilig__03F0984C" FromRole="EncuestaPerfilesPetroleo" ToRole="PersonaDiligencia" />
+          <NavigationProperty Name="Especialidad" Relationship="EncuestaPetroleo.FK__EncuestaP__Espec__05D8E0BE" FromRole="EncuestaPerfilesPetroleo" ToRole="Especialidad" />
+          <NavigationProperty Name="ExperienciaRelacionada" Relationship="EncuestaPetroleo.FK__EncuestaP__Exper__06CD04F7" FromRole="EncuestaPerfilesPetroleo" ToRole="ExperienciaRelacionada" />
+          <NavigationProperty Name="NivelEducativo1" Relationship="EncuestaPetroleo.FK__EncuestaP__Nivel__07C12930" FromRole="EncuestaPerfilesPetroleo" ToRole="NivelEducativo" />
+          <NavigationProperty Name="NoDeCargos1" Relationship="EncuestaPetroleo.FK__EncuestaP__NoDeC__08B54D69" FromRole="EncuestaPerfilesPetroleo" ToRole="NoDeCargos" />
+          <NavigationProperty Name="OtraEspecialidad" Relationship="EncuestaPetroleo.FK__EncuestaP__OtraE__09A971A2" FromRole="EncuestaPerfilesPetroleo" ToRole="OtraEspecialidad" />
+        </EntityType>
+        <Association Name="FK__EncuestaP__UserI__0A9D95DB">
+          <End Type="EncuestaPetroleo.AspNetUsers" Role="AspNetUsers" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Cargo__02FC7413">
+          <End Type="EncuestaPetroleo.Cargos" Role="Cargos" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cargos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Cargo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Empre__04E4BC85">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Empresa_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Dilig__03F0984C">
+          <End Type="EncuestaPetroleo.PersonaDiligencia" Role="PersonaDiligencia" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PersonaDiligencia">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Diligencia_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Espec__05D8E0BE">
+          <End Type="EncuestaPetroleo.Especialidad" Role="Especialidad" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Especialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="Especialidad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Exper__06CD04F7">
+          <End Type="EncuestaPetroleo.ExperienciaRelacionada" Role="ExperienciaRelacionada" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ExperienciaRelacionada">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="ExperienciaRelacionada_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__Nivel__07C12930">
+          <End Type="EncuestaPetroleo.NivelEducativo" Role="NivelEducativo" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NivelEducativo">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="NivelEducativo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__NoDeC__08B54D69">
+          <End Type="EncuestaPetroleo.NoDeCargos" Role="NoDeCargos" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NoDeCargos">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="NoDeCargos" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__EncuestaP__OtraE__09A971A2">
+          <End Type="EncuestaPetroleo.OtraEspecialidad" Role="OtraEspecialidad" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.EncuestaPerfilesPetroleo" Role="EncuestaPerfilesPetroleo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OtraEspecialidad">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="EncuestaPerfilesPetroleo">
+              <PropertyRef Name="OtraEspecialidad_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PassEmpresas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empresa" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="ClaveINI" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="UsurioCorreo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__PersonasR__UserI__3B40CD36">
+          <End Type="EncuestaPetroleo.AspNetUsers" Role="AspNetUsers" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.PersonasReunionesPerfiles" Role="PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PersonasR__Empre__3A4CA8FD">
+          <End Type="EncuestaPetroleo.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="EncuestaPetroleo.PersonasReunionesPerfiles" Role="PersonasReunionesPerfiles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="PersonasReunionesPerfiles">
+              <PropertyRef Name="EmpresaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EncuestaPetroleoStoreContainer" CdmEntityContainer="EncuestaPetroleoEntities">
+          <EntitySetMapping Name="TipoCago">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.TipoCago">
+              <MappingFragment StoreEntitySet="TipoCago">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.AspNetUsers">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="PasswordChange" ColumnName="PasswordChange" />
+                <ScalarProperty Name="Activo" ColumnName="Activo" />
+                <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cargos">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.Cargos">
+              <MappingFragment StoreEntitySet="Cargos">
+                <ScalarProperty Name="EspecialidadId" ColumnName="EspecialidadId" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CulminacionFinal">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.CulminacionFinal">
+              <MappingFragment StoreEntitySet="CulminacionFinal">
+                <ScalarProperty Name="FechaCulminacion" ColumnName="FechaCulminacion" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresa">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.Empresa">
+              <MappingFragment StoreEntitySet="Empresa">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Nit" ColumnName="Nit" />
+                <ScalarProperty Name="NoTotalTrabajadores" ColumnName="NoTotalTrabajadores" />
+                <ScalarProperty Name="Empresa1" ColumnName="Empresa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmpresaEspecialidad">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.EmpresaEspecialidad">
+              <MappingFragment StoreEntitySet="EmpresaEspecialidad">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FechaCulminacion" ColumnName="FechaCulminacion" />
+                <ScalarProperty Name="NoAplica" ColumnName="NoAplica" />
+                <ScalarProperty Name="EspecialidadCulminada" ColumnName="EspecialidadCulminada" />
+                <ScalarProperty Name="Especialidadid" ColumnName="Especialidadid" />
+                <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Especialidad">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.Especialidad">
+              <MappingFragment StoreEntitySet="Especialidad">
+                <ScalarProperty Name="Especialidad1" ColumnName="Especialidad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExperienciaRelacionada">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.ExperienciaRelacionada">
+              <MappingFragment StoreEntitySet="ExperienciaRelacionada">
+                <ScalarProperty Name="ExperienciaRelacionada1" ColumnName="ExperienciaRelacionada" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NivelEducativo">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.NivelEducativo">
+              <MappingFragment StoreEntitySet="NivelEducativo">
+                <ScalarProperty Name="NivelEducativo1" ColumnName="NivelEducativo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NoDeCargos">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.NoDeCargos">
+              <MappingFragment StoreEntitySet="NoDeCargos">
+                <ScalarProperty Name="RangoNoDeCargos" ColumnName="RangoNoDeCargos" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OtraEspecialidad">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.OtraEspecialidad">
+              <MappingFragment StoreEntitySet="OtraEspecialidad">
+                <ScalarProperty Name="OtraEspecialidad1" ColumnName="OtraEspecialidad" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonaDiligencia">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.PersonaDiligencia">
+              <MappingFragment StoreEntitySet="PersonaDiligencia">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Empresa_id" ColumnName="Empresa_id" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Dependencia" ColumnName="Dependencia" />
+                <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PersonasReunionesPerfiles">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.PersonasReunionesPerfiles">
+              <MappingFragment StoreEntitySet="PersonasReunionesPerfiles">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="EspecialidadId" ColumnName="EspecialidadId" />
+                <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+                <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+                <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+                <ScalarProperty Name="CargoDependencia" ColumnName="CargoDependencia" />
+                <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JefeGesHum">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.JefeGesHum">
+              <MappingFragment StoreEntitySet="JefeGesHum">
+                <ScalarProperty Name="Dependencia" ColumnName="Dependencia" />
+                <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="CorreoElectronioco" ColumnName="CorreoElectronioco" />
+                <ScalarProperty Name="Celular" ColumnName="Celular" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+                <ScalarProperty Name="CedulaCiudadania" ColumnName="CedulaCiudadania" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EncuestaPerfilesPetroleo">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.EncuestaPerfilesPetroleo">
+              <MappingFragment StoreEntitySet="EncuestaPerfilesPetroleo">
+                <ScalarProperty Name="DescripcionOcupacion" ColumnName="DescripcionOcupacion" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+                <ScalarProperty Name="EstudioRequerido" ColumnName="EstudioRequerido" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OtraEspecialidad_id" ColumnName="OtraEspecialidad_id" />
+                <ScalarProperty Name="Especialidad_id" ColumnName="Especialidad_id" />
+                <ScalarProperty Name="FechaDiligencia" ColumnName="FechaDiligencia" />
+                <ScalarProperty Name="Diligencia_id" ColumnName="Diligencia_id" />
+                <ScalarProperty Name="Empresa_id" ColumnName="Empresa_id" />
+                <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+                <ScalarProperty Name="NoDeCargos" ColumnName="NoDeCargos" />
+                <ScalarProperty Name="NivelEducativo" ColumnName="NivelEducativo" />
+                <ScalarProperty Name="ExperienciaRelacionada_id" ColumnName="ExperienciaRelacionada_id" />
+                <ScalarProperty Name="CertificacionesRequeridas" ColumnName="CertificacionesRequeridas" />
+                <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PassEmpresas">
+            <EntityTypeMapping TypeName="EncuestaPetroleo.PassEmpresas">
+              <MappingFragment StoreEntitySet="PassEmpresas">
+                <ScalarProperty Name="UsurioCorreo" ColumnName="UsurioCorreo" />
+                <ScalarProperty Name="ClaveINI" ColumnName="ClaveINI" />
+                <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

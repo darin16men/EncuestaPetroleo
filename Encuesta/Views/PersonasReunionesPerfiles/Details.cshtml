@@ -1,0 +1,58 @@
+﻿@model Encuesta.Models.PersonasReunionesPerfiles
+
+@{
+    ViewBag.Title = "Detalle Ocupación";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div>
+    <h4>Personas Reuniones Perfiles Ocupacionales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre Completo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            Profesón
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesion)
+        </dd>
+
+        <dt>
+            Cargo - Dependencia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoDependencia)
+        </dd>
+
+        <dt>
+            Correo Electrónico
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoElectronico)
+        </dd>
+
+        <dt>
+            Telefono - Celular
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoCelular)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver al Listado", "Index", new { id = ViewBag.EspecilidadId }))
+</p>

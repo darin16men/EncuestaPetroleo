@@ -1,0 +1,86 @@
+﻿@model Encuesta.Models.EncuestaPerfilesPetroleo
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Borrar</h2>
+
+<h3>Seguro quieres borrar el cargo @Html.DisplayFor(model => model.Cargos.Cargo)?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ocupación
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargos.Cargo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Caracteristicas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caracteristicas)
+        </dd>
+
+        <dt>
+            Experiencia Relacionada
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExperienciaRelacionada.ExperienciaRelacionada1)
+        </dd>
+
+        <dt>
+            Nivel Educativo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NivelEducativo1.NivelEducativo1)
+        </dd>
+        <dt>
+            Estudio Requerido
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstudioRequerido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NoDeCargos1.RangoNoDeCargos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NoDeCargos1.RangoNoDeCargos)
+        </dd>
+
+        <dt>
+           Especilidad
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtraEspecialidad.OtraEspecialidad1)
+        </dd>
+
+        <dt>
+            Certificaciones Requeridas
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CertificacionesRequeridas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+           
+        </div>
+    }
+    @Html.ActionLink("Volver a Ocupaciónes de "  + Model.OtraEspecialidad.OtraEspecialidad1, "Index/" + Model.OtraEspecialidad_id)
+</div>

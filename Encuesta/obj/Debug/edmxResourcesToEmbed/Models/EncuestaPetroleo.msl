@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EncuestaPetroleoStoreContainer" CdmEntityContainer="EncuestaPetroleoEntities">
+    <EntitySetMapping Name="TipoCago">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.TipoCago">
+        <MappingFragment StoreEntitySet="TipoCago">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.AspNetUsers">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="PasswordChange" ColumnName="PasswordChange" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cargos">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.Cargos">
+        <MappingFragment StoreEntitySet="Cargos">
+          <ScalarProperty Name="EspecialidadId" ColumnName="EspecialidadId" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CulminacionFinal">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.CulminacionFinal">
+        <MappingFragment StoreEntitySet="CulminacionFinal">
+          <ScalarProperty Name="FechaCulminacion" ColumnName="FechaCulminacion" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Empresa">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.Empresa">
+        <MappingFragment StoreEntitySet="Empresa">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Nit" ColumnName="Nit" />
+          <ScalarProperty Name="NoTotalTrabajadores" ColumnName="NoTotalTrabajadores" />
+          <ScalarProperty Name="Empresa1" ColumnName="Empresa" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmpresaEspecialidad">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.EmpresaEspecialidad">
+        <MappingFragment StoreEntitySet="EmpresaEspecialidad">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FechaCulminacion" ColumnName="FechaCulminacion" />
+          <ScalarProperty Name="NoAplica" ColumnName="NoAplica" />
+          <ScalarProperty Name="EspecialidadCulminada" ColumnName="EspecialidadCulminada" />
+          <ScalarProperty Name="Especialidadid" ColumnName="Especialidadid" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Especialidad">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.Especialidad">
+        <MappingFragment StoreEntitySet="Especialidad">
+          <ScalarProperty Name="Especialidad1" ColumnName="Especialidad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExperienciaRelacionada">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.ExperienciaRelacionada">
+        <MappingFragment StoreEntitySet="ExperienciaRelacionada">
+          <ScalarProperty Name="ExperienciaRelacionada1" ColumnName="ExperienciaRelacionada" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NivelEducativo">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.NivelEducativo">
+        <MappingFragment StoreEntitySet="NivelEducativo">
+          <ScalarProperty Name="NivelEducativo1" ColumnName="NivelEducativo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NoDeCargos">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.NoDeCargos">
+        <MappingFragment StoreEntitySet="NoDeCargos">
+          <ScalarProperty Name="RangoNoDeCargos" ColumnName="RangoNoDeCargos" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OtraEspecialidad">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.OtraEspecialidad">
+        <MappingFragment StoreEntitySet="OtraEspecialidad">
+          <ScalarProperty Name="OtraEspecialidad1" ColumnName="OtraEspecialidad" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonaDiligencia">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.PersonaDiligencia">
+        <MappingFragment StoreEntitySet="PersonaDiligencia">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Empresa_id" ColumnName="Empresa_id" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Dependencia" ColumnName="Dependencia" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonasReunionesPerfiles">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.PersonasReunionesPerfiles">
+        <MappingFragment StoreEntitySet="PersonasReunionesPerfiles">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EspecialidadId" ColumnName="EspecialidadId" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="TelefonoCelular" ColumnName="TelefonoCelular" />
+          <ScalarProperty Name="CorreoElectronico" ColumnName="CorreoElectronico" />
+          <ScalarProperty Name="CargoDependencia" ColumnName="CargoDependencia" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JefeGesHum">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.JefeGesHum">
+        <MappingFragment StoreEntitySet="JefeGesHum">
+          <ScalarProperty Name="Dependencia" ColumnName="Dependencia" />
+          <ScalarProperty Name="Profesion" ColumnName="Profesion" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="CorreoElectronioco" ColumnName="CorreoElectronioco" />
+          <ScalarProperty Name="Celular" ColumnName="Celular" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="EmpresaId" ColumnName="EmpresaId" />
+          <ScalarProperty Name="CedulaCiudadania" ColumnName="CedulaCiudadania" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EncuestaPerfilesPetroleo">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.EncuestaPerfilesPetroleo">
+        <MappingFragment StoreEntitySet="EncuestaPerfilesPetroleo">
+          <ScalarProperty Name="DescripcionOcupacion" ColumnName="DescripcionOcupacion" />
+          <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+          <ScalarProperty Name="EstudioRequerido" ColumnName="EstudioRequerido" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="OtraEspecialidad_id" ColumnName="OtraEspecialidad_id" />
+          <ScalarProperty Name="Especialidad_id" ColumnName="Especialidad_id" />
+          <ScalarProperty Name="FechaDiligencia" ColumnName="FechaDiligencia" />
+          <ScalarProperty Name="Diligencia_id" ColumnName="Diligencia_id" />
+          <ScalarProperty Name="Empresa_id" ColumnName="Empresa_id" />
+          <ScalarProperty Name="Caracteristicas" ColumnName="Caracteristicas" />
+          <ScalarProperty Name="NoDeCargos" ColumnName="NoDeCargos" />
+          <ScalarProperty Name="NivelEducativo" ColumnName="NivelEducativo" />
+          <ScalarProperty Name="ExperienciaRelacionada_id" ColumnName="ExperienciaRelacionada_id" />
+          <ScalarProperty Name="CertificacionesRequeridas" ColumnName="CertificacionesRequeridas" />
+          <ScalarProperty Name="Cargo" ColumnName="Cargo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PassEmpresas">
+      <EntityTypeMapping TypeName="EncuestaPetroleo.PassEmpresas">
+        <MappingFragment StoreEntitySet="PassEmpresas">
+          <ScalarProperty Name="UsurioCorreo" ColumnName="UsurioCorreo" />
+          <ScalarProperty Name="ClaveINI" ColumnName="ClaveINI" />
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

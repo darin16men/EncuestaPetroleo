@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>INSTRUCTIVO ENCUESTA DE PERFILES OCUPACIONALES</h1>
+    <p class="lead">Estimado Experto:</p>
+        <dl>
+            <dd>
+                Nos complace contar con la participación de su empresa en el proyecto de “Estandarización de Perfiles Ocupacionales del Sector Petrolero”, adelantado por la Unidad Administrativa Especial del Servicio Público de Empleo. <br />
+                <br />
+                La escogencia de las empresas que conforman la muestra con la que se desarrollará el proyecto, se llevó a cabo con la participación de entes del estado y privados, teniendo como criterio básico de selección, que dichas empresas ejecuten su negocio a través de actividades de Exploración, Producción, Transporte y Refinación de Hidrocarburos y que además cuenten con expertos técnicos, que aporten sus conocimientos en las ocupaciones propias de la industria Oil & Gas definidas así:
+                <br />
+                <div class="col-md-6">
+                    <br />
+                    <ul>
+                        <li>Adquisición y Procesamiento Sísmico.</li>
+                        <li>Mantenimiento de Superficies Oil & Gas.</li>
+                        <li>Operaciones Marítimas y Fluviales.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <br />
+                    <ul>
+                        <li>Metalmecánica Oil & Gas.</li>
+                        <li>Operaciones de Subsuelo.</li>
+                        <li>Operaciones de Plantas y Estaciones.</li>
+                    </ul>
+                </div>
+            </dd>
+            <br style="clear:both;" />
+            <dd>
+                Con base en lo anterior, para el diligenciamiento del formato se deben seguir las siguientes indicaciones:
+                <br />
+                <br />
+                <ol>
+                    @*<li>Aceptación de la empresa para participar en el proyecto, mediante la remisión de un correo electrónico, indicando el nombre y el e-mail del jefe de Talento Humano o quien haga sus veces, persona que será la responsable de la información final que se registre y apruebe.</li>*@
+                    <li>Una vez se ha ingresado al aplicativo de “Perfiles Ocupacionales” encuentra que el usuario y clave, son el correo electrónico.  El usuario se mantendrá durante todo el proceso, sin embargo la clave o contraseña debe ser cambiada, incluyendo seis (6) caracteres alfanuméricos. </li>
+                    <li>El Jefe de Talento Humano debe coordinar al interior de su empresa la creación de cuantos usuarios considere, para el diligenciamiento del formato (diligenciadores).</li>
+                    <li>El diligenciador debe ingresar a la Especialidad Laboral y tramitar los datos de todas las ocupaciones relacionadas, que se desarrollen en la empresa. Una vez se finaliza la  Especialidad, el jefe de Talento Humano debe avalar la información, asignar a la persona que asistirá a la reunión de expertos y dar por finalizada la Especialidad.</li>
+                    <li>El procedimiento se debe repetir por cada una de las especialidades laborales que desarrollen en la empresa, e indicar que NO APLICA en aquéllas que sean ajenas a su negocio.</li>
+                    <li>Una vez el jefe de Talento Humano ha dado por finalizadas todas las Especialidades que se desarrollen en su empresa, no habrá posibilidades de modificación. La información obtenida será objeto de análisis por parte de la Unidad de Servicio Público, como insumo para presentar un perfil básico en la reunión de expertos, en la cual, se estandarizará cada ocupación propia del sector petrolero.</li>
+                </ol>
+                </dd>
+            <dd>
+                Cualquier información adicional, contáctenos a los siguientes correos electrónicos:   mbernal.ext@serviciodeempleo.gov.co y/o lardila.ext@serviciodeempleo.gov.co
+            </dd>
+            <dd>
+                <br style="clear:both;" />
+                Agradecemos su amable participación en el diligenciamiento de la información sobre perfiles ocupacionales del sector de hidrocarburos.
+                @*Gracias por participar en el proyecto de Estandarización de los Perfiles Ocupacionales del sector Petrolero.*@
+            </dd>
+            <dd>
+                <br style="clear:both;" />
+                “Una vez concluida la etapa de diligenciamiento de información en el aplicativo, se remitirá a cada empresa, el cronograma de las seis (6) reuniones de expertos, mediante las cuales se efectuará la revisión, análisis y estandarización de los perfiles ocupacionales.”
+            </dd>
+
+        </dl>
+    <p>@Html.ActionLink("Iniciar>>", "../EmpresaEspecialidads/Index", null, new { @class = "btn btn-primary btn-large" })</p>
+</div>

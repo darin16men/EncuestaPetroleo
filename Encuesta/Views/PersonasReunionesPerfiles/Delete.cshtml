@@ -1,0 +1,64 @@
+﻿@model Encuesta.Models.PersonasReunionesPerfiles
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+
+<h3>¿Seguro que quieres borrar este registro?</h3>
+<div>
+    <h4>Personas Reuniones Perfiles Ocupacionales para @ViewBag.EspecilidadId</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            Nombre Completo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            Profesón
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profesion)
+        </dd>
+
+        <dt>
+            Cargo - Dependencia
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CargoDependencia)
+        </dd>
+
+        <dt>
+            Correo Electrónico
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CorreoElectronico)
+        </dd>
+
+        <dt>
+            Telefono - Celular
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoCelular)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Borrar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver al Listado", "Index", new { id = ViewBag.EspecilidadId })
+        </div>
+    }
+</div>

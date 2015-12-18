@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dd662aa33dba44ff9f2bfa4f42cf70f1" Name="Diagram1" ZoomLevel="112">
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.Cargos" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.Empresa" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.EncuestaPerfilesPetroleo" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.Especialidad" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.ExperienciaRelacionada" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.JefeGesHum" Width="1.5" PointX="13.125" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.NivelEducativo" Width="1.5" PointX="8" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.NoDeCargos" Width="1.5" PointX="8" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.OtraEspecialidad" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.PersonaDiligencia" Width="1.5" PointX="8" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.TipoCago" Width="1.5" PointX="8" PointY="9" IsExpanded="true" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__Cargos__Especial__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Cargo__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Empre__33D4B598" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__JefeGH__Empresa___3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__PersonaDi__Empre__440B1D61_Empresa_id_dbo_Empresa_Id_NO_ACTION_NO_ACTION__" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Dilig__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Espec__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Exper__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__Nivel__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__NoDeC__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__OtraE__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__TipoC__3A81B327" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.PersonasReunionesPerfiles" Width="1.5" PointX="12.875" PointY="5" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__PersonasR__Espec__1AD3FDA4" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.EmpresaEspecialidad" Width="1.5" PointX="3" PointY="12.875" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EmpresaEs__Empre__73BA3083" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EmpresaEs__Espec__74AE54BC" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.CulminacionFinal" Width="1.5" PointX="3" PointY="16.5" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__Culminaci__Empre__19DFD96B" />
+        <EntityTypeShape EntityType="EncuestaPetroleoModel.AspNetUsers" Width="1.5" PointX="10.125" PointY="3.625" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__Empresa__UserID__4BAC3F29" />
+        <AssociationConnector Association="EncuestaPetroleoModel.FK__EncuestaP__User__3A81B327" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
